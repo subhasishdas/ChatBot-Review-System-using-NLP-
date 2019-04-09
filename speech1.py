@@ -7,12 +7,10 @@ import warnings
 warnings.filterwarnings("ignore")
 import speech_recognition as sr
 import csv
-#account = "AC87b15bfd3a62ff7b07fe498901d9e07a"
-#account = "AC472dcf29e5e7a74bd57cc4f379487064"
-account = "AC8e7ff6ab2e84aec38112d0d58256d857"
-#token = "4a8347e2f1cd1f18b8db8fbfd32cfc29"
-#token = "494fe477a11ece0a03b20cdfdbce4475"
-token = "fe1dc105b610696711a29aaf228a252a"
+
+account = "Enter account key here"
+
+token = "Enter token key here"
 
 
 # nltk.download() # for downloading packages
@@ -22,12 +20,11 @@ import random
 import string # to process standard python strings
 
 client = Client(account, token)
-#f=open('Plootusbot1.txt','r',errors = 'ignore')
+
 f=open('Hotelbot.txt','r',errors = 'ignore')
 raw=f.read()
 raw=raw.lower()# converts to lowercase
-#nltk.download('punkt') # first-time use only
-#nltk.download('wordnet') # first-time use only
+
 sent_tokens = nltk.sent_tokenize(raw)# converts to list of sentences 
 word_tokens = nltk.word_tokenize(raw)# converts to list of words
 
